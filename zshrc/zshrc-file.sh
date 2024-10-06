@@ -201,7 +201,11 @@ alias lla='ls -alh'
 alias python='python3'
 # Shows the last 30 entries, default is 15
 alias history='history -30'
-
+# Git Aliases
+alias gac='git add . && git commit -m'
+alias gs='git status'
+alias gpush='git push origin'
+alias lg='lazygit'
 # kubernetes, if you need help, just run 'kgp --help' for example
 alias k='kubectl'
 alias kx='kubectx'
