@@ -15,7 +15,7 @@ FONT="MesloLGM Nerd Font"
 
 # All paddings use this value (icon, label, background), default is 3 but I
 # decreased it
-PADDINGS=1
+PADDINGS=3
 
 # Setting up and starting the helper process
 HELPER=git.felix.helper
@@ -28,15 +28,15 @@ launchctl unload -F /System/Library/LaunchAgents/com.apple.OSDUIHelper.plist >/d
 
 # Setting up the general bar appearance of the bar
 bar=(
-  height=45
+  height=50
   color=$BAR_COLOR
   border_width=2
   border_color=$BAR_BORDER_COLOR
   shadow=off
   position=top
   sticky=on
-  padding_right=10
-  padding_left=10
+  padding_right=15
+  padding_left=15
   y_offset=-5
   margin=-2
   topmost=window
@@ -47,11 +47,11 @@ sketchybar --bar "${bar[@]}"
 # Setting up default values
 defaults=(
   updates=when_shown
-  icon.font="$FONT:Bold:14.0"
+  icon.font="$FONT:Bold:17.0"
   icon.color=$ICON_COLOR
   icon.padding_left=$PADDINGS
   icon.padding_right=$PADDINGS
-  label.font="$FONT:Semibold:13.0"
+  label.font="$FONT:Semibold:17.0"
   label.color=$LABEL_COLOR
   label.padding_left=$PADDINGS
   label.padding_right=$PADDINGS
@@ -77,6 +77,9 @@ sketchybar --default "${defaults[@]}"
 
 # Shows the apple logo, you can change it's color in "items/apple.sh"
 # If you click on it, you can see preferences, activity and lock screen
+#
+source "$ITEM_DIR/media.sh"
+
 source "$ITEM_DIR/apple.sh"
 
 # source "$ITEM_DIR/spaces.sh"
@@ -95,7 +98,6 @@ source "$ITEM_DIR/front_app.sh"
 ###############################################################################
 
 # Shows album art and song name, I prefer this as it give me useful info
-source "$ITEM_DIR/media.sh"
 
 # Shows floating window when spotify is playing a song
 # source "$ITEM_DIR/spotify.sh"
