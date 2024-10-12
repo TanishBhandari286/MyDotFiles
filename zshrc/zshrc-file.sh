@@ -206,6 +206,7 @@ alias gac='git add . && git commit -m'
 alias gs='git status'
 alias gpush='git push origin'
 alias lg='lazygit'
+alias update='brew update && brew upgrade'
 # kubernetes, if you need help, just run 'kgp --help' for example
 alias k='kubectl'
 alias kx='kubectx'
@@ -924,3 +925,4 @@ if [ "$OS" = 'Linux' ]; then
     source <(kubectl completion zsh)
   fi
 fi
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh

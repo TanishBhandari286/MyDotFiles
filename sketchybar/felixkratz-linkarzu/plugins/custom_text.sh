@@ -5,4 +5,4 @@
 
 source "$CONFIG_DIR/colors.sh"
 
-sketchybar -m --set custom_text label="linkarzu" label.color=$BLUE
+sketchybar -m --set custom_text label="Tanish" label.color=$BLUE
